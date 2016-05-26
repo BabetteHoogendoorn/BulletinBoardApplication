@@ -4,7 +4,7 @@ var fs = require('fs');
 var app = express();
 var pg = require('pg');
 var bodyParser = require('body-parser');
-var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/bulletinboard'; //database heet bij mij messages
+var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/bulletinboard'; //database heet bij mij babettehoogendoorn
 // var connectionString = "postgres://babettehoogendoorn:postgres@localhost/babettehoogendoorn";
 
 
