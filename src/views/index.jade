@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+  link(href='style.css', rel='stylesheet')
+  body
+    #nav
+        a(href='/') HOME
+        a(href='/wall') WALL
+  h2 Fill out the form to create a beautiful wall!
+  form(name="add-estimation", action="/submit", method="post")
+      div.input
+          span.label Title:
+          input(type="text", name="title")
+      div.input
+          span.label Body:
+          input(type="text", name="body")
+      div.actions
+          input(type="submit", value="submit")

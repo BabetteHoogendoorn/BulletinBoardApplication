@@ -1,0 +1,30 @@
+#nav {
+  padding: 10px;
+  background-color: purple;
+  margin-bottom: 25px;
+
+}
+#nav a {
+  padding: 20px;
+  font-family: Arial;
+  color: yellow;
+}
+
+body {
+  font-family: Arial;
+}
+
+h2 {
+  font-family: Arial;
+  color: blue;
+}
+
+h3 {
+  font-family: Arial;
+  color: hotpink;
+}
+
+p {
+  font-family: Arial;
+  color: grey;
+}

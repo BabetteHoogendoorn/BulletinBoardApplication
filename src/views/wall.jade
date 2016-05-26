@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+  link(href='style.css', rel='stylesheet')
+  body
+    #nav
+        a(href='/') HOME
+        a(href='/wall') WALL
+  h2 Wall of bulletins!
+    each message in messages
+      h3 #{message.id}
+      p #{message.title}
+      p #{message.body}

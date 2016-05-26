@@ -1,0 +1,25 @@
+{
+  "name": "bulletinboardapplication",
+  "version": "1.0.0",
+  "description": "bulletin board",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "BabetteHoogendoorn"
+  },
+  "keywords": [
+    "bulletin",
+    "board",
+    "application"
+  ],
+  "author": "Babette",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "pg": "^4.5.5"
+  }
+}
