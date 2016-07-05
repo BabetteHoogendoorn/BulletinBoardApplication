@@ -4,8 +4,19 @@ var fs = require('fs');
 var app = express();
 var pg = require('pg');
 var bodyParser = require('body-parser');
+var sass = require('node-sass');
 var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/babettehoogendoorn'; //database heet bij mij babettehoogendoorn / anders bulletinboard
 //var connectionString = "postgres://babettehoogendoorn:postgres@localhost/babettehoogendoorn";
+
+sass.render( {
+    file: './src/input.scss'
+}, (err, result) => {
+    fs.writeFile( './src/style.css', result.css.toString(), ( err ) => {
+        if ( err ) throw err
+            console.log( 'Sass written to css' )
+            console.log( result.css.toString() )
+    } )
+} )
 
 
 //allow to work with jade files
@@ -21,6 +32,12 @@ app.get('/', function(request, response){
   response.render('index')
   //console.log("iets")
 });
+
+//sass
+sass.render({
+  file: 'src/input.scss'
+}, function(err, result) {});
+
 
 //post messages to database met daarin de pg.connect
 app.post('/submit', function (request, response) { //action is submit want staat in form bij action in index.jade
