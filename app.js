@@ -79,6 +79,6 @@ app.get('/wall', function(request, response) {
 
 
 
-var server = app.listen(7000, function() {
+var server = app.listen(3000, function() {
   console.log('Example app listening on port: ' + server.address().port);
 });
